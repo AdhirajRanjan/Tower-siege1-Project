@@ -22,6 +22,7 @@ class Chain{
     fly()
     {
         this.chain.bodyA=null
+        console.log("fly")
     }
     
 }

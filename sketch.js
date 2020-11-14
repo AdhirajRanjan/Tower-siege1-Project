@@ -48,7 +48,8 @@ function setup() {
   block16 = new Box(390,140,30,40)
   
 
-  polygon = Bodies.circle(50,200,20);
+  polygon = Matter.Bodies.polygon(100,200,5,20)
+  polygonimg=loadImage("Pentagon.png")
   World.add(world, polygon);
 
   slingShot = new Chain(polygon, {x:100,y:200})
@@ -98,17 +99,20 @@ function draw() {
 
   fill("lightblue")
   blocks9.display()
+  
+  //ellipseMode(RADIUS)
+  //ellipse(polygon.position.x,polygon.position.y,20,20)
+  imageMode(CENTER)
+  image(polygonimg,polygon.position.x,polygon.position.y,50,50)
 
   slingShot.display()
-  
-  
-  
+
   drawSprites();
 }
 
 function mouseDragged() 
 {
-    Matter.Body.setPosition(polygon.body, {x:mouseX,y:mouseY})
+    Matter.Body.setPosition(polygon, {x:mouseX,y:mouseY})
 }
 
 function mouseReleased() 

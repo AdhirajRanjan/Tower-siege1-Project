@@ -11,7 +11,7 @@ class Box{
       World.add(world, this.body);
     }
     display(){
-      console.log(this.body.speed)
+      //console.log(this.body.speed)
         var angle = this.body.angle;
         var pos = this.body.position;
       push();
