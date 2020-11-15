@@ -107,6 +107,8 @@ function draw() {
 
   slingShot.display()
 
+  Engine.update(engine)
+  
   drawSprites();
 }
 
